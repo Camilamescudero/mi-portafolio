@@ -1,8 +1,4 @@
-.image-grid-4 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: $spacing-md;
-  max-width: 100%; // ✅ NUEVO: Previene overflow
+
   
   @include respond-to-old(tablet-up) {
     grid-template-columns: repeat(2, 1fr);
@@ -20,5 +16,18 @@
     &:hover {
       transform: scale(1.05);
     }
+  }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+  
+  @include respond-to-old(tablet-up) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }

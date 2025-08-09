@@ -48,3 +48,49 @@
     margin-left: $spacing-2xl; // Espacio entre texto e imágenes
   }
 }
+
+.image-grid-4 {
+  order: 2; // ✅ Imágenes después del texto en móvil
+  
+  // ✅ MÓVIL: 1 columna con imágenes grandes
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-lg;
+  
+  // ✅ TABLET: 2 columnas más compactas
+  @include respond-to-old(tablet-up) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-md;
+    max-width: 400px;
+  }
+  
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-light;
+    transition: transform $transition-base;
+    
+    // ✅ Altura responsive
+    height: 220px; // Móvil: imágenes más grandes
+    
+    @include respond-to-old(tablet-up) {
+      height: 150px; // Tablet+: más compactas
+    }
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+// ✅ MEJORAR EL CONTENEDOR PRINCIPAL
+.about-section {
+  padding: $spacing-4xl 0;
+  
+  .about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-xl;
+  }
+}
