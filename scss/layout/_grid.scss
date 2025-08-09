@@ -1,9 +1,4 @@
 
-  
-  @include respond-to-old(tablet-up) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
   // ✅ NUEVO: Asegurar que las imágenes respeten el grid
   img {
     width: 100%;
