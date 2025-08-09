@@ -1,17 +1,3 @@
-
-  img {
-    width: 100%;
-    height: 200px; // ✅ Altura fija para mantener proporción
-    object-fit: cover;
-    border-radius: $border-radius-md;
-    transition: transform $transition-base;
-    box-shadow: $shadow-light;
-    
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-
 .skills-grid {
   @include grid-responsive(1, 2); // 1 col en mobile, 2 en tablet-up
   gap: $spacing-xl;
