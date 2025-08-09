@@ -1,15 +1,16 @@
 .construction-image {
-  @include center-content;
-  margin: $spacing-3xl auto;
+  text-align: center;
+  margin-top: $spacing-4xl;
   
   img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     border-radius: $border-radius-lg;
+    box-shadow: $shadow-medium;
+    transition: transform $transition-base;
     
-    // Efecto de difuminado en bordes
-    -webkit-mask-image: radial-gradient(ellipse 100% 100% at center, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
-    mask-image: radial-gradient(ellipse 100% 100% at center, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
-    @include transition(all, $transition-fast);
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }

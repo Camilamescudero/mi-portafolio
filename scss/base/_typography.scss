@@ -23,3 +23,47 @@ ul {
 li {
   margin-bottom: $spacing-sm;
 }
+
+.titulo-central {
+  text-align: center;
+  color: $navy-blue;
+  font-size: 2.5rem;
+  margin-bottom: $spacing-2xl;
+}
+
+.page-content {
+  padding: $spacing-4xl $spacing-xl;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  h1 {
+    text-align: center;
+    color: $navy-blue;
+    margin-bottom: $spacing-2xl;
+  }
+  
+  p {
+    color: $text-color;
+    line-height: $line-height;
+    margin-bottom: $spacing-md;
+  }
+}
+
+// ... tu código existente ...
+
+.page-content {
+  padding: $spacing-4xl $spacing-xl;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden; // ✅ NUEVO: Previene scroll horizontal
+  
+  h1 {
+    color: $navy-blue;
+  }
+  
+  p {
+    color: $text-color;
+    line-height: $line-height;
+    margin-bottom: $spacing-md;
+  }
+}

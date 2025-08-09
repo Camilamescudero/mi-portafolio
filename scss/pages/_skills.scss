@@ -1,31 +1,35 @@
 .skills-section {
-  margin-bottom: $spacing-3xl;
+  margin: $spacing-3xl 0;
   
-  .skills-grid {
-    @include grid-responsive(1, 2);
-    gap: $spacing-xl;
-    margin-top: $spacing-xl;
+  h2 {
+    color: $navy-blue;
+    margin-bottom: $spacing-2xl;
   }
   
-  .skill-card {
-    background-color: $white;
-    padding: $spacing-xl;
-    border-radius: $border-radius-lg;
-    box-shadow: $shadow-light;
-    @include transition(transform);
+  ul {
+    list-style: none;
+    padding: 0;
     
-    &:hover {
-      transform: translateY(-5px);
+    li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: $spacing-md;
+      color: $text-color;
+      
+      &::before {
+        content: '🔹';
+        position: absolute;
+        left: 0;
+        color: $red;
+      }
     }
-    
-    h3 {
-      color: $dark-red;
-      margin-bottom: $spacing-lg;
-    }
-    
-    ul {
-      list-style: disc;
-      color: $dark-blue;
-    }
+  }
+}
+
+.skill-card ul {
+  li::before {
+    content: '✓';
+    color: $red;
+    font-weight: bold;
   }
 }

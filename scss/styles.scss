@@ -1,16 +1,30 @@
-// Importaciones de archivos SCSS
+// ===== IMPORTACIONES DE ARCHIVOS SCSS =====
+
+// ABSTRACTS - Siempre primero (variables y mixins)
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
+
+// BASE - Estilos base y tipografía
 @import 'base/reset';
 @import 'base/typography';
+
+// LAYOUT - Estructura y grillas
+@import 'layout/grid';          // 🆕 NUEVO - Para grids responsive
 @import 'layout/header';
 @import 'layout/footer';
+
+// COMPONENTS - Componentes reutilizables
+@import 'components/buttons';   // ✅ YA MODIFICADO
+@import 'components/cards';     // 🆕 NUEVO - Para project cards y skill cards
 @import 'components/forms';
-@import 'components/buttons';
 @import 'components/icons';
+
+// PAGES - Estilos específicos por página
 @import 'pages/home';
 @import 'pages/about';
 @import 'pages/skills';
 @import 'pages/projects';
 @import 'pages/contact';
+
+// UTILITIES - Utilidades y clases auxiliares
 @import 'utilities/responsive';

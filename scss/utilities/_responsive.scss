@@ -13,3 +13,24 @@
     font-size: 0.95rem;
   }
 }
+
+// Utilidades responsive
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  @include respond-to(tablet) {
+    padding: 0 40px;
+  }
+  
+  @include respond-to(desktop) {
+    padding: 0 60px;
+  }
+}
+
+// Text responsive
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.2;
+}

@@ -1,0 +1,20 @@
+.skill-card {
+  @include hover-lift;
+  @include animate-in;
+  background: $off-white;
+  border-radius: $border-radius-lg;
+  padding: $spacing-2xl;
+  border: 2px solid transparent;
+  transition: all $transition-base;
+  
+  &:hover {
+    border-color: $red;
+    background: $white;
+  }
+  
+  h3 {
+    color: $navy-blue;
+    margin-bottom: $spacing-md;
+    font-size: 1.25rem;
+  }
+}

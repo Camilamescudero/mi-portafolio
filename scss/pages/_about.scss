@@ -1,40 +1,50 @@
-.about-section {
-  padding: $spacing-3xl $spacing-xl;
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-3xl;
+  max-width: 100%; // ✅ NUEVO: Previene overflow
   
-  .about-content {
-    display: flex;
-    justify-content: center;
+  @include respond-to-old(tablet-up) {
+    flex-direction: row;
     align-items: flex-start;
-    gap: $spacing-3xl;
-    max-width: $large;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    
-    @include respond-to(tablet) {
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-    }
+  }
+}
+
+.text-content {
+  flex: 2;
+  min-width: 0; // ✅ NUEVO: Permite que el flex item se encoja
+  
+  h2 {
+    color: $navy-blue;
+    margin-top: $spacing-2xl;
+    margin-bottom: $spacing-lg;
   }
   
-  .text-content {
-    flex: 1 1 450px;
-    text-align: justify;
+  ul {
+    list-style: none;
+    padding: 0;
     
-    h1,
-    h2 {
-      color: $dark-red;
-    }
-    
-    ul {
-      padding-left: $spacing-xl;
-      list-style: disc;
-      color: $dark-blue;
-    }
-    
-    p {
-      color: $dark-blue;
+    li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: $spacing-md;
+      color: $text-color;
+      
+      &::before {
+        content: '💡';
+        position: absolute;
+        left: 0;
+      }
     }
   }
+}
+
+.image-grid-4 {
+  flex: 1;
+  min-width: 0; // ✅ NUEVO: Permite que el flex item se encoja
+  max-width: 400px; // ✅ NUEVO: Limita el ancho máximo
   
+  @include respond-to-old(tablet-up) {
+    margin-left: $spacing-2xl; // Espacio entre texto e imágenes
+  }
 }
