@@ -1,0 +1,77 @@
+// Mixin para centrar contenido
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para responsive
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: #{$mobile - 1px}) { @content; }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: #{$tablet - 1px}) { @content; }
+  }
+  @if $breakpoint == tablet-up {
+    @media (min-width: #{$tablet}) { @content; }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: #{$desktop}) { @content; }
+  }
+}
+
+// Mixin para transiciones
+@mixin transition($property: all, $duration: $transition-fast, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+// Mixin para botones
+@mixin button-style($bg-color, $text-color: $white, $hover-color: null) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  font-weight: bold;
+  @include transition(background-color);
+  
+  &:hover {
+    background-color: if($hover-color, $hover-color, darken($bg-color, 10%));
+  }
+}
+
+// Mixin para texto responsive
+@mixin responsive-text($mobile-size, $desktop-size) {
+  font-size: $mobile-size;
+  
+  @include respond-to(tablet-up) {
+    font-size: $desktop-size;
+  }
+}
+
+// Mixin para grids
+@mixin grid-responsive($mobile-cols: 1, $tablet-cols: 2, $desktop-cols: null) {
+  display: grid;
+  grid-template-columns: repeat($mobile-cols, 1fr);
+  
+  @include respond-to(tablet-up) {
+    grid-template-columns: repeat($tablet-cols, 1fr);
+  }
+  
+  @if $desktop-cols {
+    @include respond-to(desktop) {
+      grid-template-columns: repeat($desktop-cols, 1fr);
+    }
+  }
+}
+
+// Mixin para hover effects en imágenes
+@mixin hover-image-effect {
+  @include transition(all, $transition-medium);
+  
+  &:hover {
+    filter: blur(0);
+    transform: scale(1.05);
+  }
+}

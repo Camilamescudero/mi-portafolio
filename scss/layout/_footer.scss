@@ -1,0 +1,28 @@
+footer {
+  background-color: $navy-blue;
+  color: $off-white;
+  text-align: center;
+  padding: $spacing-lg 0;
+  margin-top: $spacing-3xl;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  
+  // Footer fijo en la parte inferior
+  &.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  p {
+    margin: 0;
+    font-size: $font-size-small;
+  }
+}
+
+// Asegurar que el contenido no quede tapado por el footer fijo
+body.with-fixed-footer {
+  padding-bottom: 60px; // Altura aproximada del footer
+}

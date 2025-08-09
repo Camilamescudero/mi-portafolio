@@ -1,0 +1,16 @@
+// Importaciones de archivos SCSS
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/reset';
+@import 'base/typography';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/icons';
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/skills';
+@import 'pages/projects';
+@import 'pages/contact';
+@import 'utilities/responsive';

@@ -1,0 +1,31 @@
+.skills-section {
+  margin-bottom: $spacing-3xl;
+  
+  .skills-grid {
+    @include grid-responsive(1, 2);
+    gap: $spacing-xl;
+    margin-top: $spacing-xl;
+  }
+  
+  .skill-card {
+    background-color: $white;
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-light;
+    @include transition(transform);
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+    
+    h3 {
+      color: $dark-red;
+      margin-bottom: $spacing-lg;
+    }
+    
+    ul {
+      list-style: disc;
+      color: $dark-blue;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+button {
+  width: fit-content;
+  padding: $spacing-md $spacing-xl;
+  @include button-style($red, $white, $hover-button);
+  font-size: $font-size-base;
+  
+  // Variaciones de botones usando @each
+  @each $name, $color in (
+    'primary': $red,
+    'secondary': $light-blue,
+    'dark': $navy-blue
+  ) {
+    &.btn-#{$name} {
+      @include button-style($color);
+    }
+  }
+}

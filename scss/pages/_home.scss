@@ -1,0 +1,36 @@
+.presentacion {
+  padding: 2rem;
+  
+  .contenido-presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    
+    @include respond-to(tablet) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  .texto-presentacion {
+    flex: 1;
+    text-align: justify;
+    min-width: 250px;
+    
+    @include respond-to(tablet) {
+      text-align: justify;
+    }
+  }
+  
+  .perfil-img {
+    width: 250px;
+    height: 250px;
+    border-radius: $border-radius-circle;
+    object-fit: cover;
+    border: 3px solid $light-blue;
+    box-shadow: $shadow-medium;
+  }
+}

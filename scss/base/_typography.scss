@@ -1,0 +1,25 @@
+h1 {
+  text-align: center;
+  @include responsive-text(2rem, $font-size-large);
+  margin: $spacing-2xl 0;
+  color: $dark-red;
+}
+
+h2 {
+  margin-top: $spacing-xl;
+  color: $red;
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto $spacing-2xl auto;
+  padding: 0 $spacing-xl;
+}
+
+ul {
+  padding-left: $spacing-xl;
+}
+
+li {
+  margin-bottom: $spacing-sm;
+}

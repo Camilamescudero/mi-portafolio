@@ -1,0 +1,15 @@
+// Utilidades responsive adicionales
+.page-content {
+  min-height: calc(100vh - 120px); // Altura mínima considerando header y footer
+  padding: 0 2rem;
+
+  @include respond-to(tablet) {
+    padding: 0 1.5rem;
+    font-size: 1rem;
+  }
+
+  @include respond-to(mobile) {
+    padding: 0 0.5rem;
+    font-size: 0.95rem;
+  }
+}

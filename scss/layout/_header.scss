@@ -1,0 +1,32 @@
+header {
+  background-color: $navy-blue;
+  padding: $spacing-md 0;
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+  
+  nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: $spacing-xl;
+      flex-wrap: wrap;
+      padding-left: 0; // Override del ul general
+    }
+    
+    a {
+      color: $off-white;
+      text-decoration: none;
+      padding: $spacing-sm $spacing-lg;
+      border-radius: $border-radius-sm;
+      @include transition(background);
+      
+      &:hover,
+      &.active {
+        background-color: $light-blue;
+        color: $navy-blue;
+      }
+    }
+  }
+}

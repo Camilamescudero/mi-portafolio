@@ -1,0 +1,43 @@
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-4xl;
+  margin-top: $spacing-xl;
+  flex-wrap: wrap;
+  
+  @include respond-to(tablet) {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .icon-item {
+    text-align: center;
+    
+    i {
+      font-size: $font-size-icon;
+      color: $text-color;
+      margin-bottom: $spacing-sm;
+      @include transition(transform, $transition-fast);
+      @include transition(color, $transition-fast);
+    }
+    
+    p {
+      margin-top: 6px;
+      font-weight: bold;
+      color: $link-color;
+      font-size: $font-size-small;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    &:hover {
+      i {
+        transform: scale(1.2);
+        color: $red;
+      }
+    }
+  }
+}

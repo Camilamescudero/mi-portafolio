@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# CSS Maps (opcional)
+*.css.map
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,17 @@
+{
+  "name": "camila-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio personal de Camila Mailén Escudero",
+  "main": "index.html",
+  "scripts": {
+    "watch-sass": "sass --watch scss/styles.scss:css/styles.css",
+    "build-sass": "sass scss/styles.scss:css/styles.css --style compressed",
+    "dev": "sass --watch scss/styles.scss:css/styles.css --source-map"
+  },
+  "keywords": ["portfolio", "scss", "html", "responsive", "web-development"],
+  "author": "Camila Mailén Escudero",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
