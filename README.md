@@ -7,6 +7,6 @@ Este es mi primer portfolio como estudiante de Desarrollo FullStack en Coderhous
 - CSS3 (con variables, Flexbox, Grid)
 - Git & GitHub
 
-## Link del sitio en línea
-👉 https://Camilamescudero.github.io/mi-portfolio
+- ## Link del sitio en línea
+https://camilamescudero.github.io/mi-portafolio/index.html
 
