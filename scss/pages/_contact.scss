@@ -1,3 +1,21 @@
-.titulo-centrado {
-  text-align: center;
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas en desktop */
+  gap: 1rem;
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-row.full-width {
+    grid-column: span 2; /* ocupa las 2 columnas */
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* una sola columna en mobile */
+    .form-row.full-width {
+      grid-column: span 1;
+    }
+  }
 }

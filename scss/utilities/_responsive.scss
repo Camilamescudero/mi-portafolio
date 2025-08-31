@@ -1,36 +1,34 @@
-// Utilidades responsive adicionales
-.page-content {
-  min-height: calc(100vh - 120px); // Altura mínima considerando header y footer
-  padding: 0 2rem;
 
+// Contenido de la página
+.page-content {
+  min-height: calc(100vh - 120px); // Ajusta según header/footer
+  padding: 0 2rem;
   @include respond-to(tablet) {
     padding: 0 1.5rem;
     font-size: 1rem;
   }
-
   @include respond-to(mobile) {
+    min-height: auto; // Evita problemas de altura en móvil
     padding: 0 0.5rem;
     font-size: 0.95rem;
   }
 }
-
-// Utilidades responsive
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  
-  @include respond-to(tablet) {
-    padding: 0 40px;
-  }
-  
-  @include respond-to(desktop) {
-    padding: 0 60px;
-  }
+// Título centrado
+.titulo-centrado {
+  text-align: center;
 }
-
-// Text responsive
+// Título hero con tamaño responsivo
 .hero-title {
   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1.2;
+}
+// Ejemplo adicional: imágenes responsivas
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+// Evitar scroll horizontal por elementos anchos
+* {
+  box-sizing: border-box;
 }

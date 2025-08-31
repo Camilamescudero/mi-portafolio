@@ -2,11 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto</title>
+  <meta name="keywords" content="Contacto, Camila Mailén Escudero, Portfolio, Desarrolladora Web, Full Stack Developer">
+  <meta name="description" content="Ponte en contacto con Camila Mailén Escudero, una desarrolladora web apasionada por crear soluciones digitales innovadoras y funcionales." />
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
   <header>
@@ -76,6 +80,27 @@
   <footer>
     <p>&copy; 2025, Camila Mailén Escudero. Todos los derechos reservados.</p>
   </footer>
+  <script>
+  const form = document.querySelector(".contact-form form");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // Evita que recargue la página
+
+    // Ejemplo: mostrar notificación
+    Toastify({
+      text: "¡Mensaje enviado con éxito!",
+      duration: 3000, // 3 segundos
+      close: true,
+      gravity: "top", // "top" o "bottom"
+      position: "right", // "left", "center" o "right"
+      backgroundColor: "#4CAF50", // verde
+    }).showToast();
+
+    // Limpiar los campos después:
+    form.reset();
+  });
+</script>
+
 </body>
 </html>
 
